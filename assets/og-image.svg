@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="sheen" cx="14%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#a06a15" stop-opacity="0.20"/>
+      <stop offset="55%" stop-color="#a06a15" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .h { font-family: "Syne","Inter",sans-serif; fill:#faf9f4; }
+      .b { font-family: "DM Sans","Inter",sans-serif; fill:#faf9f4; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#071827"/>
+  <rect width="1200" height="630" fill="url(#sheen)"/>
+
+  <!-- wordmark -->
+  <g transform="translate(90,86)">
+    <g transform="translate(0,-4)" fill="none" stroke="#faf9f4" stroke-width="1.4">
+      <rect x="3.4" y="3.4" width="17.2" height="17.2" transform="rotate(45 12 12)"/>
+      <path d="M12 7.2 L15.4 15 H8.6 Z" stroke-linejoin="round"/>
+      <line x1="9.5" y1="13" x2="14.5" y2="13" stroke="#a06a15"/>
+    </g>
+    <text class="h" x="38" y="14" font-size="22" font-weight="700" letter-spacing="6" dominant-baseline="middle">ASSENTUM</text>
+  </g>
+
+  <!-- eyebrow -->
+  <text class="b" x="90" y="300" font-size="20" font-weight="500" letter-spacing="4.5" fill="#b5853a">REAL-WORLD ASSET INFRASTRUCTURE</text>
+
+  <!-- headline -->
+  <text class="h" x="88" y="372" font-size="62" font-weight="700" letter-spacing="-1">Institutional real-world</text>
+  <text class="h" x="88" y="446" font-size="62" font-weight="700" letter-spacing="-1">asset tokenization.</text>
+
+  <!-- lede -->
+  <text class="b" x="90" y="512" font-size="25" fill="#faf9f4" opacity="0.62">Legal, technical and market infrastructure for premium physical assets.</text>
+
+  <!-- footer tag -->
+  <line x1="90" y1="566" x2="118" y2="566" stroke="#faf9f4" stroke-opacity="0.3"/>
+  <text class="b" x="130" y="572" font-size="16" letter-spacing="3" fill="#faf9f4" opacity="0.6">BY INTRODUCTION ONLY</text>
+
+  <!-- gold base hairline -->
+  <rect x="0" y="628" width="1200" height="2" fill="#a06a15" opacity="0.55"/>
+</svg>

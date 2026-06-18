@@ -1,0 +1,10 @@
+# Assentum — private by default.
+# The site ships closed to crawlers until copy has legal/comms approval
+# (per the launch pack acceptance criteria). To allow indexing after sign-off,
+# replace the block below with:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://assentum.io/sitemap.xml
+
+User-agent: *
+Disallow: /
