@@ -24,14 +24,14 @@
   </g>
 
   <!-- eyebrow -->
-  <text class="b" x="90" y="300" font-size="20" font-weight="500" letter-spacing="4.5" fill="#b5853a">REAL-WORLD ASSET INFRASTRUCTURE</text>
+  <text class="b" x="90" y="300" font-size="18" font-weight="500" letter-spacing="3.8" fill="#b5853a">PRIVATE MARKETS · REAL-WORLD ASSETS</text>
 
   <!-- headline -->
-  <text class="h" x="88" y="372" font-size="62" font-weight="700" letter-spacing="-1">Institutional real-world</text>
-  <text class="h" x="88" y="446" font-size="62" font-weight="700" letter-spacing="-1">asset tokenization.</text>
+  <text class="h" x="88" y="372" font-size="57" font-weight="700" letter-spacing="-1">Institutional infrastructure</text>
+  <text class="h" x="88" y="446" font-size="57" font-weight="700" letter-spacing="-1">for real-world assets.</text>
 
   <!-- lede -->
-  <text class="b" x="90" y="512" font-size="25" fill="#faf9f4" opacity="0.62">Legal, technical and market infrastructure for premium physical assets.</text>
+  <text class="b" x="90" y="512" font-size="25" fill="#faf9f4" opacity="0.62">Premium physical assets, structured for qualified institutions.</text>
 
   <!-- footer tag -->
   <line x1="90" y1="566" x2="118" y2="566" stroke="#faf9f4" stroke-opacity="0.3"/>

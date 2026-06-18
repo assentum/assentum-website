@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Assentum — Institutional Real-World Asset Tokenization</title>
-  <meta name="description" content="Assentum provides the legal, technical and market infrastructure to structure, tokenize and distribute premium physical assets for institutional and qualified counterparties." />
+  <title>Assentum — Institutional Infrastructure for Real-World Assets</title>
+  <meta name="description" content="Assentum structures, tokenizes and distributes premium physical assets as compliant, transferable instruments — held by qualified institutions, by introduction." />
 
   <meta name="theme-color" content="#071827" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -14,19 +14,27 @@
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Assentum" />
-  <meta property="og:title" content="Assentum — Institutional Real-World Asset Tokenization" />
-  <meta property="og:description" content="Legal, technical and market infrastructure for premium physical assets. By introduction only." />
+  <meta property="og:title" content="Assentum — Institutional Infrastructure for Real-World Assets" />
+  <meta property="og:description" content="Premium physical assets, structured as compliant instruments for qualified institutions. By introduction only." />
   <meta property="og:url" content="https://assentum.io/" />
   <meta property="og:image" content="https://assentum.io/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Assentum — Institutional Real-World Asset Tokenization" />
-  <meta name="twitter:description" content="Legal, technical and market infrastructure for premium physical assets. By introduction only." />
+  <meta name="twitter:title" content="Assentum — Institutional Infrastructure for Real-World Assets" />
+  <meta name="twitter:description" content="Premium physical assets, structured as compliant instruments for qualified institutions. By introduction only." />
   <meta name="twitter:image" content="https://assentum.io/assets/og-image.png" />
 
   <!-- Self-hosted fonts: no third-party requests, no tracking -->
   <link rel="preload" href="fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=5" />
+
+  <!-- No-JS fallback: never leave animated-in content hidden -->
+  <noscript>
+    <style>
+      [data-load], [data-load-line], .reveal { opacity: 1 !important; transform: none !important; }
+      .hero__glow { display: none !important; }
+    </style>
+  </noscript>
 
   <script type="application/ld+json">
   {
@@ -34,13 +42,14 @@
     "@type": "Organization",
     "name": "Assentum",
     "url": "https://assentum.io",
-    "description": "Institutional real-world asset tokenization infrastructure for premium physical assets.",
+    "description": "Institutional infrastructure for the structuring, tokenization and distribution of premium real-world assets.",
     "email": "contact@assentum.io"
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" data-header>
@@ -60,10 +69,10 @@
           <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span></span>
         </button>
         <ul class="nav__menu" id="nav-menu" data-nav-menu>
-          <li><a href="#mandate">Mandate</a></li>
-          <li><a href="#capability">Capability</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#contact" class="nav__cta">Contact</a></li>
+          <li><a href="#mandate" data-navlink>Mandate</a></li>
+          <li><a href="#capability" data-navlink>Capability</a></li>
+          <li><a href="#process" data-navlink>Process</a></li>
+          <li><a href="#contact" class="nav__cta" data-navlink>Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -73,29 +82,49 @@
     <span id="top"></span>
 
     <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" data-hero aria-labelledby="hero-title">
+      <div class="hero__glow" data-hero-glow aria-hidden="true"></div>
       <div class="wrap hero__inner">
-        <p class="hero__eyebrow reveal">
-          <span class="eyebrow__rule"></span>Real-world asset infrastructure
+        <p class="hero__eyebrow" data-load>
+          <span class="eyebrow__rule"></span>Private markets · Real-world assets
         </p>
-        <h1 class="hero__title reveal" id="hero-title">Institutional real&#8209;world<br>asset tokenization.</h1>
-        <p class="hero__lede reveal">Legal, technical and market infrastructure for premium physical assets.</p>
-        <div class="hero__actions reveal">
-          <a class="btn btn--gold" href="#contact">Request an introduction</a>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span data-load-line>Institutional infrastructure</span></span>
+          <span class="line"><span data-load-line>for real&#8209;world assets.</span></span>
+        </h1>
+        <p class="hero__lede" data-load>
+          Assentum structures, tokenizes and distributes premium physical assets as compliant,
+          transferable instruments — held by qualified institutions, by introduction.
+        </p>
+        <div class="hero__actions" data-load>
+          <a class="btn btn--gold" href="#contact">
+            Request an introduction
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
           <span class="hero__tag">By introduction only</span>
         </div>
       </div>
-      <div class="hero__hairline" aria-hidden="true"></div>
+      <a class="hero__scroll" href="#mandate" data-load aria-label="Scroll to mandate">
+        <span>Scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
     </section>
+
+    <!-- soft transition: navy hero → light canvas -->
+    <div class="bleed bleed--enter" aria-hidden="true"></div>
+
+    <!-- one continuous ivory→cream canvas (no hard section edges) -->
+    <div class="band band--light">
 
     <!-- ============ MANDATE ============ -->
     <section class="section mandate" id="mandate" aria-labelledby="mandate-label">
       <div class="wrap mandate__inner">
         <p class="eyebrow reveal" id="mandate-label"><span class="eyebrow__rule"></span>Mandate</p>
         <p class="mandate__statement reveal">
-          Assentum bridges institutional capital and premium real assets through compliant token structures.
-          We assemble the legal, technical and distribution infrastructure required to bring physical value
-          on-chain — structured for qualified counterparties and governed by auditable, regulated frameworks.
+          Assentum operates where exceptional physical assets meet institutional capital. We engineer
+          the legal, technical and distribution architecture that renders landmark real estate and
+          premium holdings into compliant, transferable instruments — defined by
+          <em>enforceable rights</em>, <em>auditable controls</em> and <em>regulated distribution</em>.
         </p>
       </div>
     </section>
@@ -104,21 +133,24 @@
     <section class="section capability" id="capability" aria-labelledby="capability-label">
       <div class="wrap">
         <p class="eyebrow reveal" id="capability-label"><span class="eyebrow__rule"></span>Capability</p>
-        <div class="cards">
-          <article class="card reveal">
-            <span class="card__index">01</span>
-            <h2 class="card__title">Legal &amp; Structural Rigour</h2>
-            <p class="card__body">Jurisdiction, SPV, rights and regulatory pathway — defined before a single token exists.</p>
+        <div class="cap-list">
+          <article class="cap-row reveal">
+            <span class="cap-row__index">01</span>
+            <h2 class="cap-row__title">Legal &amp; Structuring</h2>
+            <p class="cap-row__desc">Each instrument begins with enforceable rights: jurisdiction, special-purpose vehicle, security design and a cleared regulatory pathway.</p>
+            <svg class="cap-row__arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </article>
-          <article class="card reveal">
-            <span class="card__index">02</span>
-            <h2 class="card__title">Technical Infrastructure</h2>
-            <p class="card__body">KYC, custody, transfer controls and auditable token logic, engineered to institutional standards.</p>
+          <article class="cap-row reveal">
+            <span class="cap-row__index">02</span>
+            <h2 class="cap-row__title">Technical Infrastructure</h2>
+            <p class="cap-row__desc">Institutional custody, identity and transfer controls, with token logic that is auditable from issuance to settlement.</p>
+            <svg class="cap-row__arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </article>
-          <article class="card reveal">
-            <span class="card__index">03</span>
-            <h2 class="card__title">Institutional Distribution</h2>
-            <p class="card__body">Qualified investor access and secondary liquidity design, placed through trusted channels.</p>
+          <article class="cap-row reveal">
+            <span class="cap-row__index">03</span>
+            <h2 class="cap-row__title">Institutional Distribution</h2>
+            <p class="cap-row__desc">Placement with qualified holders through trusted channels — and secondary liquidity engineered from day one.</p>
+            <svg class="cap-row__arrow" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </article>
         </div>
       </div>
@@ -130,38 +162,47 @@
         <p class="eyebrow reveal" id="process-label"><span class="eyebrow__rule"></span>Process</p>
         <ol class="steps">
           <li class="step reveal">
+            <span class="step__rule" aria-hidden="true"></span>
             <span class="step__num">01</span>
-            <h2 class="step__title">Structure</h2>
-            <p class="step__body">Define jurisdiction, entity and the rights conveyed.</p>
+            <h2 class="step__title">Structuring</h2>
+            <p class="step__body">Define the entity, jurisdiction and the precise rights conveyed.</p>
           </li>
           <li class="step reveal">
+            <span class="step__rule" aria-hidden="true"></span>
             <span class="step__num">02</span>
-            <h2 class="step__title">Design</h2>
-            <p class="step__body">Engineer compliant, auditable token logic and controls.</p>
+            <h2 class="step__title">Engineering</h2>
+            <p class="step__body">Build the instrument: compliant token logic, controls and custody.</p>
           </li>
           <li class="step reveal">
+            <span class="step__rule" aria-hidden="true"></span>
             <span class="step__num">03</span>
             <h2 class="step__title">Approval</h2>
-            <p class="step__body">Secure legal and regulatory sign-off ahead of issuance.</p>
+            <p class="step__body">Clear legal and regulatory review ahead of issuance.</p>
           </li>
           <li class="step reveal">
+            <span class="step__rule" aria-hidden="true"></span>
             <span class="step__num">04</span>
             <h2 class="step__title">Distribution</h2>
-            <p class="step__body">Place with qualified investors and design secondary liquidity.</p>
+            <p class="step__body">Place with qualified institutions and stand up secondary liquidity.</p>
           </li>
         </ol>
       </div>
     </section>
+
+    </div><!-- /band--light -->
+
+    <!-- soft transition: light canvas → navy contact -->
+    <div class="bleed bleed--exit" aria-hidden="true"></div>
 
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact" aria-labelledby="contact-label">
       <div class="wrap contact__inner">
         <div class="contact__intro">
           <p class="eyebrow eyebrow--ivory reveal" id="contact-label"><span class="eyebrow__rule"></span>Contact</p>
-          <h2 class="contact__title reveal">Request an introduction</h2>
+          <h2 class="contact__title reveal">Request an<br>introduction</h2>
           <p class="contact__lede reveal">
-            Assentum operates by direct introduction, for institutional and qualified counterparties.
-            Share a brief note and we will respond discreetly.
+            Assentum engages a limited number of counterparties by direct introduction.
+            If our mandate aligns with yours, leave a brief note and we will respond discreetly.
           </p>
           <p class="contact__email reveal">
             <a href="mailto:contact@assentum.io">contact@assentum.io</a>
@@ -192,7 +233,10 @@
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
 
-          <button type="submit" class="btn btn--gold contact__submit">Request an introduction</button>
+          <button type="submit" class="btn btn--gold contact__submit">
+            Request an introduction
+            <svg class="btn__arrow" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
           <p class="form__status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -211,15 +255,44 @@
           </svg>
           <span class="wordmark__text">ASSENTUM</span>
         </a>
-        <!-- Optional credibility line — enable only with legal/comms approval:
+        <p class="footer__affiliation">
+          In association with <strong>Gap 3 Partners</strong>, a virtual asset advisory firm
+          regulated by Dubai&rsquo;s Virtual Assets Regulatory Authority (VARA).
+        </p>
+        <!-- Optional additional credibility line — enable only with legal/comms approval:
         <p class="footer__affiliation">A member of the Fasset Group.</p>
         -->
       </div>
 
-      <p class="footer__disclaimer">
-        This website is for institutional information only and does not constitute an offer to sell
-        securities or tokens. Engagement is by direct introduction only.
-      </p>
+      <!-- PLACEHOLDER DISCLOSURES — confirm wording with legal/comms before public launch. -->
+      <div class="footer__disclaimer">
+        <p class="footer__disclaimer-label">Important information</p>
+        <p>
+          Assentum provides this website for institutional information purposes only. Nothing
+          contained on it constitutes, or should be construed as, an offer to sell, a solicitation
+          of an offer to buy, or a recommendation in respect of any security, token, digital asset
+          or other financial instrument, in any jurisdiction in which such an offer, solicitation
+          or recommendation would be unlawful.
+        </p>
+        <p>
+          The information presented is directed solely at professional, institutional and qualified
+          counterparties engaged by direct introduction. It is not intended for retail investors or
+          the general public, and does not have regard to the investment objectives, financial
+          situation or particular needs of any specific person.
+        </p>
+        <p>
+          Assentum works with Gap 3 Partners, a virtual asset advisory firm regulated by the
+          Dubai Virtual Assets Regulatory Authority (VARA). Any regulated virtual asset advisory
+          activity referenced on this website is carried out by Gap 3 Partners under its
+          applicable permissions.
+        </p>
+        <p>
+          Nothing on this website constitutes legal, financial, tax, regulatory or investment
+          advice, nor any representation or warranty as to the accuracy or completeness of the
+          information provided. Any engagement with Assentum is subject to separate written
+          agreements, applicable eligibility requirements and prevailing law.
+        </p>
+      </div>
 
       <div class="footer__meta">
         <a href="mailto:contact@assentum.io">contact@assentum.io</a>
@@ -228,6 +301,6 @@
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>
