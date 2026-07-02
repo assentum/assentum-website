@@ -1,42 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <radialGradient id="sheen" cx="14%" cy="0%" r="80%">
-      <stop offset="0%" stop-color="#a06a15" stop-opacity="0.20"/>
-      <stop offset="55%" stop-color="#a06a15" stop-opacity="0"/>
+    <radialGradient id="glowBR" cx="92%" cy="108%" r="75%">
+      <stop offset="0%" stop-color="#1d6bff" stop-opacity="0.36"/>
+      <stop offset="60%" stop-color="#1d6bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTL" cx="4%" cy="-10%" r="55%">
+      <stop offset="0%" stop-color="#1d6bff" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#1d6bff" stop-opacity="0"/>
     </radialGradient>
     <style>
-      .h { font-family: "Syne","Inter",sans-serif; fill:#faf9f4; }
-      .b { font-family: "DM Sans","Inter",sans-serif; fill:#faf9f4; }
+      .t { font-family: "Inter","Helvetica Neue",Helvetica,Arial,sans-serif; }
     </style>
   </defs>
 
-  <rect width="1200" height="630" fill="#071827"/>
-  <rect width="1200" height="630" fill="url(#sheen)"/>
+  <rect width="1200" height="630" fill="#05070c"/>
+  <rect width="1200" height="630" fill="url(#glowBR)"/>
+  <rect width="1200" height="630" fill="url(#glowTL)"/>
 
   <!-- wordmark -->
-  <g transform="translate(90,86)">
-    <g transform="translate(0,-4)" fill="none" stroke="#faf9f4" stroke-width="1.4">
-      <rect x="3.4" y="3.4" width="17.2" height="17.2" transform="rotate(45 12 12)"/>
-      <path d="M12 7.2 L15.4 15 H8.6 Z" stroke-linejoin="round"/>
-      <line x1="9.5" y1="13" x2="14.5" y2="13" stroke="#a06a15"/>
-    </g>
-    <text class="h" x="38" y="14" font-size="22" font-weight="700" letter-spacing="6" dominant-baseline="middle">ASSENTUM</text>
-  </g>
+  <rect x="90" y="72" width="26" height="26" rx="6.5" fill="#1d6bff"/>
+  <text class="t" x="130" y="92" font-size="19" font-weight="700" letter-spacing="5.2" fill="#ffffff">ASSENTUM</text>
 
   <!-- eyebrow -->
-  <text class="b" x="90" y="300" font-size="18" font-weight="500" letter-spacing="3.8" fill="#b5853a">PRIVATE MARKETS · REAL-WORLD ASSETS</text>
+  <text class="t" x="90" y="294" font-size="16" font-weight="500" letter-spacing="3.4" fill="#6ed5ff">PRIVATE CAPITAL MARKETS · INSTITUTIONAL DIGITAL ASSETS</text>
 
   <!-- headline -->
-  <text class="h" x="88" y="372" font-size="57" font-weight="700" letter-spacing="-1">Institutional infrastructure</text>
-  <text class="h" x="88" y="446" font-size="57" font-weight="700" letter-spacing="-1">for real-world assets.</text>
+  <text class="t" x="88" y="372" font-size="62" font-weight="700" letter-spacing="-1.4" fill="#ffffff">Real-world assets.</text>
+  <text class="t" x="88" y="450" font-size="62" font-weight="700" letter-spacing="-1.4" fill="#1d6bff">Structured. Distributed.</text>
 
   <!-- lede -->
-  <text class="b" x="90" y="512" font-size="25" fill="#faf9f4" opacity="0.62">Premium physical assets, structured for qualified institutions.</text>
+  <text class="t" x="90" y="518" font-size="23" fill="#c9d6e8">A private capital markets platform for institutional digital assets.</text>
 
-  <!-- footer tag -->
-  <line x1="90" y1="566" x2="118" y2="566" stroke="#faf9f4" stroke-opacity="0.3"/>
-  <text class="b" x="130" y="572" font-size="16" letter-spacing="3" fill="#faf9f4" opacity="0.6">BY INTRODUCTION ONLY</text>
-
-  <!-- gold base hairline -->
-  <rect x="0" y="628" width="1200" height="2" fill="#a06a15" opacity="0.55"/>
+  <!-- tag -->
+  <line x1="90" y1="566" x2="113" y2="566" stroke="#3c485a"/>
+  <text class="t" x="126" y="571" font-size="14.5" letter-spacing="3" fill="#9aa4b2">BY INTRODUCTION ONLY</text>
 </svg>

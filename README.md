@@ -141,17 +141,22 @@ just re-commenting the one line.
 
 ## Design tokens
 
-Defined as CSS variables at the top of `styles.css`:
+Aligned to the July 2026 Assentum deal-pack design language. Defined as CSS
+variables at the top of `styles.css`:
 
-| Token | Value     | Use                                   |
-|-------|-----------|---------------------------------------|
-| Navy  | `#071827` | Hero, contact, footer, primary fields |
-| Ivory | `#FAF9F4` | Page background                       |
-| Cream | `#F4EFE6` | Cards, process band                   |
-| Gold  | `#A06A15` | Section labels, accents, CTA          |
-| Ink   | `#11131A` | Primary text                          |
+| Token | Value     | Use                                    |
+|-------|-----------|----------------------------------------|
+| Bg    | `#05070C` | Page background (near-black, dark throughout) |
+| Panel | `#0A1526` | Cards / form panel                     |
+| Blue  | `#1D6BFF` | Primary accent — logo mark, headline line 2, CTA |
+| Cyan  | `#6ED5FF` | Section labels, inline emphasis        |
+| White | `#FFFFFF` | Primary text / headings                |
+| Ice   | `#C9D6E8` | Secondary text                         |
+| Grey  | `#9AA4B2` | Muted text                             |
+| Slate | `#667085` | Faint text / footer legal              |
 
-Headings use **Syne**; body uses **DM Sans** (Inter / system sans fallback).
+All type is **Inter** (self-hosted; Helvetica/Arial fallback), matching the
+deck's neutral grotesque. Logo mark is the solid blue rounded square.
 
 ---
 
